@@ -6,7 +6,7 @@ import Button from "../Button/Button"
 import Loading from "../Loading/Loading";
 
 class ImageGallery extends Component {
-    state ={
+    state = {
         cards:[],
         isLoading:false,
         error:"",
