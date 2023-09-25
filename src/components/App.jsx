@@ -1,30 +1,23 @@
-import React,{Component} from "react";
+import {useState} from "react";
 import Searchbar from './Searchbar'
 import css from "./app.module.css"
 
 import ImageGallery from "./ImageGallery";
 
-export class App extends Component {
+export const App = () => {
 
-state = {
-  name:"",
-  page:1,
-}
+const [name,setName] = useState('');
+const [page,setPage] = useState(1);
 
-addValue = value => {
-  
-    this.setState({name:value})
-}
-
-  render(){
-const {name,page} = this.state;
+const addValue = value => {
+    setName(value);
+  };
 
     return(
       <div className={css.App}>
-        <Searchbar onSubmit={this.addValue}/>
-        <ImageGallery value={name} page={page}/>
+        <Searchbar onSubmit={addValue}/>
+        <ImageGallery pages={page} value={name} />
       </div>
     )
   }
-}
 
