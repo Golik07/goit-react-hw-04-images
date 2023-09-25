@@ -7,7 +7,6 @@ import ImageGallery from "./ImageGallery";
 export const App = () => {
 
 const [name,setName] = useState('');
-const [page,setPage] = useState(1);
 
 const addValue = value => {
     setName(value);
@@ -16,7 +15,7 @@ const addValue = value => {
     return(
       <div className={css.App}>
         <Searchbar onSubmit={addValue}/>
-        <ImageGallery pages={page} value={name} />
+        <ImageGallery  value={name} />
       </div>
     )
   }

@@ -5,7 +5,7 @@ import {api}  from '../service/api';
 import Button from "../Button/Button"
 import { Audio } from 'react-loader-spinner'
 
-const ImageGallery = ({value,pages}) => {
+const ImageGallery = ({value}) => {
 
     const [cards,setCards] = useState([]);
     const [isLoading,setIsLoading] = useState(false);
